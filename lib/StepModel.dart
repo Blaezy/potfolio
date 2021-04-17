@@ -17,5 +17,9 @@ class StepModel {
       id: 3,
       text: "Pick update delivery at your door and enjoy groceries",
     ),
+    StepModel(
+      id: 4,
+      text: "Get all the Services at one place",
+    )
   ];
 }
