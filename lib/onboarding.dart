@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:newproject/LoginSignup.dart';
+import 'package:newproject/Screens/AuthScreen.dart';
 import 'package:newproject/StepModel.dart';
 
 import 'AppDrawer.dart';
@@ -84,13 +86,18 @@ class _OnboardingState extends State<Onboarding> {
                                 duration: Duration(microseconds: 500),
                                 curve: Curves.easeIn);
                           }
+                          if (initialPage == 3) {
+                            Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                    builder: (context) => AuthScreen()));
+                          }
                         },
                         child: Center(
                           child: Container(
                             width: 65,
                             height: 65,
                             decoration: BoxDecoration(
-                                color: Colors.deepOrange,
+                                color: Color(0xFFFF9163),
                                 borderRadius: BorderRadius.circular(100)),
                             child: Icon(
                               Icons.arrow_forward_ios,

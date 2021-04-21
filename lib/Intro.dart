@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:newproject/AppDrawer.dart';
+
 import 'package:newproject/onboarding.dart';
 
 class Intro extends StatefulWidget {
