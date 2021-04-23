@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newproject/LoginSignup.dart';
+import 'package:newproject/Models/Authentication.dart';
 import 'package:newproject/Screens/AuthScreen.dart';
 import 'package:newproject/StepModel.dart';
 
@@ -87,9 +88,8 @@ class _OnboardingState extends State<Onboarding> {
                                 curve: Curves.easeIn);
                           }
                           if (initialPage == 3) {
-                            Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(
-                                    builder: (context) => AuthScreen()));
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => Authentication()));
                           }
                         },
                         child: Center(

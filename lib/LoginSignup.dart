@@ -227,7 +227,7 @@ class _LoginSignupState extends State<LoginSignup> {
                       child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               primary: Color(0xFFFF9163)),
-                          onPressed: () {
+                          onPressed: () async {
                             _saveForm();
                           },
                           child: Text(isLogin == false ? "SignUp" : "LogIn",
