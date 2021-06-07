@@ -88,8 +88,9 @@ class _OnboardingState extends State<Onboarding> {
                                 curve: Curves.easeIn);
                           }
                           if (initialPage == 3) {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => Authentication()));
+                            Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                    builder: (context) => Authentication()));
                           }
                         },
                         child: Center(

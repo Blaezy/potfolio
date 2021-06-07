@@ -229,6 +229,8 @@ class _LoginSignupState extends State<LoginSignup> {
                               primary: Color(0xFFFF9163)),
                           onPressed: () async {
                             _saveForm();
+                            print(_user.email);
+                            print(_user.password);
                           },
                           child: Text(isLogin == false ? "SignUp" : "LogIn",
                               style: GoogleFonts.encodeSansSemiExpanded()))),

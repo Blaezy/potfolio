@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:newproject/Intro.dart';
 import 'package:newproject/Screens/AuthScreen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -26,7 +27,7 @@ class _MyAppState extends State<MyApp> {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: Intro()
+        home: DashBoard()
         // StreamBuilder(
         //     // initialData: Intro(),
         //     stream: FirebaseAuth.instance.authStateChanges(),

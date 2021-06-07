@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:newproject/LoginSignup.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class AuthScreen extends StatefulWidget {
   @override
@@ -10,11 +11,12 @@ class AuthScreen extends StatefulWidget {
 }
 
 class _AuthScreenState extends State<AuthScreen> {
+  final Future<FirebaseApp> _initialization = Firebase.initializeApp();
   final _auth = FirebaseAuth.instance;
   var _isLoading = false;
 
-  void _submitAuthForm(String name, String email, String password, bool isLogin,
-      BuildContext ctx) async {
+  Future<void> _submitAuthForm(String name, String email, String password,
+      bool isLogin, BuildContext ctx) async {
     UserCredential authResult;
     try {
       setState(() {

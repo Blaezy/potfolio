@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:newproject/AppDrawer.dart';
 
 class DashBoard extends StatefulWidget {
   //String name;
@@ -14,6 +15,7 @@ class _DashBoardState extends State<DashBoard> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        drawer: AppDrawer(),
         appBar: AppBar(
           actions: [
             DropdownButton(
